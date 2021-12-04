@@ -1,3 +1,12 @@
+def main():
+    print('part 1')
+    print(get_position('day2/test_input.txt'))
+    print(get_position('day2/input.txt'))
+
+    print('part 2')
+    print(get_position2('day2/test_input.txt'))
+    print(get_position2('day2/input.txt'))
+
 def get_position(path: str):
     depth = horizontal = 0
     with open(path, 'r') as f:
@@ -13,10 +22,6 @@ def get_position(path: str):
             depth -= int(value)
         
     return depth * horizontal
-
-print('part 1')
-print(get_position('day2/test_input.txt'))
-print(get_position('day2/input.txt'))
 
 def get_position2(path: str):
     depth = horizontal = aim = 0
@@ -35,6 +40,5 @@ def get_position2(path: str):
     
     return depth * horizontal
 
-print('part 2')
-print(get_position2('day2/test_input.txt'))
-print(get_position2('day2/input.txt'))
+if __name__ == "__main__":
+    main()
