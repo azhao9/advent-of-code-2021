@@ -66,7 +66,7 @@ def part2(path: str):
             if len(numbers[(2, 3, 5)][i].intersection(numbers[(2, 3, 5)][j])) == 3:
                 (idx, ) = {0, 1, 2} - {i, j}
                 numbers[(2, 5)] = [numbers[(2, 3, 5)][i], numbers[(2, 3, 5)][j]]
-                
+
         numbers[3] = numbers[(2, 3, 5)][idx]
 
         for k in range(len(numbers[(0, 6, 9)])):
@@ -95,7 +95,7 @@ def part2(path: str):
     return total
 
 def _code_to_str(code: Set[str]):
-    return ''.join(sorted(list(code)))
+    return  ''.join(sorted(list(code)))
 
 if __name__ == '__main__':
     main()
